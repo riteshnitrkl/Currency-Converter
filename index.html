@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURRENCY CONVERTER</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            font-family: 'Noto Sans', sans-serif;
+            font-weight: 900;
+            display: flex;
+            font-size: 20px;
+            background-color:rgb(219, 138, 217);
+            padding: 23px
+            ;
+        }
+
+        nav li a{
+             text-decoration: none;
+             color: black;
+             transition: all;
+             transition-duration: 500ms
+        }
+
+        nav li a:hover{
+             text-decoration: none;
+             color: rgb(200, 195, 216);
+             ;
+        }
+
+        div.logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 23px;
+        }
+
+        nav ul li{
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul{
+            display: flex;
+        }
+
+        .container{
+            min-height: 100vh;
+            font-family: 'Roboto Slab', serif;
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .container h1 ,h2{
+            margin: 23px 0;
+
+        }
+
+      .container form input[type = 'number'], select , label{
+        font-size: 25px;
+        width: 23vw;
+        margin-bottom: 23px\;
+      }
+
+      .output{
+        /* display: none; */
+      }
+
+      .btn{
+        width: 144px;
+        padding: 5px 11px;
+        font-size: 20px;
+        background : rgb(211, 135, 211);
+        color: black;
+        border-radius: 13px;
+      }
+
+      .container form label{
+        font-size: 25px;
+      }
+
+      .container form{
+       display: flex;
+       flex-direction: column;
+    }
+
+    .output table{
+        width: 50vw;
+        text-align: center;
+        border:2px solid black;
+        font-size: 20px;
+    }
+        footer{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class= "logo">CurrencyConverter</div>
+       <ul>  
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact Us">Contact</a></li>
+       </ul>
+
+    </nav>
+    <div class = "container">
+        <h1>Choose Currency To Convert</h1>
+        <form action="/action.php" method="get">
+            <label for="quantity">Choose Quantity:</label>
+            <input type="number" name="quantity" min="1" max="10">
+            
+            <label for="currency">Choose Currency:</label>
+            <select name="currency">
+                <option value="INR">India</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+            </select>
+            <button class="btn" type="submit">Submit</button>
+           <div class="output">
+            <table>
+                <caption>Converted Currency</caption>
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Currency Code</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+                
+            </table>
+           </div>
+        </form>
+
+    </div>
+    <footer>
+       Copyright &copy; All Rights Reserved
+    </footer>
+    <script src ="main.js">
+
+    </script>
+</body>
+</html>
